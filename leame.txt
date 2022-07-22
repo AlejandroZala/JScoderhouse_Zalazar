@@ -1,0 +1,36 @@
+(main.js) Aplcación usando DOM 
+
+1-Creo archivo constructor_productos.js (contiene el class constructor de mi array de objetos)
+2-Creo archivo array_productos.js       (cargo mi array con mis objetos datos)
+3-Incorporo en la pagina de productos de mi web un div desde el JS todos los productos de mi array de objetos.
+4-Acciones interactuando desde el DOM en la pagina de productos:
+        *Agregar  o quitar productos seleccionados del carrito.
+        *Calcular la suma de precios de los elemntos en el carro.
+        *Ver en la pagina la lista de los productos a comprar y el precio total de la compra.
+
+
+--------------------------------------------------------------------------------------------------------------------
+(main2.js)
+
+Aplicación como carro de compras como un agregado a mi proyecto de Desarrollo Web de una pagina web para venta de licores artesanales.
+
+Debere ver como hacer con el titulo ya que esto era una proyecto real de para mi esposa que solo hace los licores, jaja.
+
+Permite ingreso por usuario con prompt:
+
+1- seleccionar categoria de productos: (licor o dulce)
+2- seleccionar id del producto que se quiere comprar.
+3- agragar al carro de compras el producto seleccionado.
+
+todo esto usando arrays y un método de búsqueda y filtrado en el array para armar el carro de compras.
+
+4- La pagina web tiene el agregado de los botones para agregar al carrito que antes no tenia.
+
+------------------------------------------------------------------------------------------------------------------------
+(main1.js)
+
+Algoritmo que permite la usuario seleccionar desde el prompt alguno de los 3 licores y según la cantidad se obtiene un descuento y si el pago es en un pago o con trjeta en cuotas se le cobra un recargo.
+
+Al final se muestra con un alert el precio final de la compra y el valor de la cuota.
+
+

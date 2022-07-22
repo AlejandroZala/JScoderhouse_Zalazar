@@ -1,0 +1,172 @@
+@import "../variables/variables";
+@import "sass2/mixins";
+@import "sass2/extend";
+
+main {
+    grid-area: main;
+}
+
+.gridMain {
+    display: grid;
+    grid-template-areas: "texto texto"
+                        "imag video";
+    background-color: $celesteClaro;
+}
+
+.gridMainEmpresa {
+    display: flex;
+    background-color: $celesteClaro;
+}
+
+.gridMainProductos {
+    display: grid;
+    grid-template-areas: "proda prodb prodc";
+    background-color: $celesteClaro;
+}
+
+.caja-imagen {
+    grid-area: imag;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @extend .alinearCajaTextImagVid;
+}
+
+.caja-video {
+    grid-area: video;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @extend .alinearCajaTextImagVid;
+}
+
+.caja-lista-principal {
+    grid-area: texto;
+    margin: 30px 30px;
+    @extend .alienarCajaListaPrincipal;
+    ul {
+        list-style: none;
+        @extend .alienarCajaListaPrincipal;
+        li {
+            margin-top: 5px;
+            font-family: $fontArial;
+            font-size: large;
+            color: $negro;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+    }
+}
+/*Pagina Contacto*/
+.cajaFormulario {
+    padding: 5%;
+    background-color: $celesteClaro;
+  }
+
+/*Pagina Empresa*/
+.caja-marco {
+    background-color: $celesteClaro;
+    font-family: $fontArial;
+    text-align: center;
+    color: $negro;
+    padding: 20px;
+}
+.caja-texto {
+    margin: 20px;
+    padding: 5px;
+    font-size: larger;
+}
+
+/*Pagina Como Comprar*/
+.caja-texto-a {
+    @extend .alinearCajaText-a-b;
+}
+
+.caja-texto-b {
+    text-align: left;
+    @extend .alinearCajaText-a-b;
+}
+/*Pagina Productos*/
+.cajaPrecio {
+    width: 150px;
+    height: 35px;
+    text-align: center;
+    text-justify: center;
+    align-items: center;
+    background-color: rgb(210, 237, 245);
+    border-style: solid;
+    border-radius: 8px;
+    animation-name: precio;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+}
+
+@keyframes precio {
+    0% {
+        color: darkred;
+    }
+
+    25% {
+        color: rgb(211, 51, 12);
+        transform: rotate(-25deg);
+    }
+
+    50% {
+        color: red;
+        transform: rotate(25deg);
+    }
+
+    75% {
+        color: darkred;
+    }
+}
+
+.precio {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: $fontArial;
+}
+
+.proda {
+    grid-area: proda;
+    @extend .alinearProduc;
+}
+
+.texto-proda {
+    grid-area: proda;
+    display: flex;
+    margin: 20px;
+}
+
+.texto-proda ul li {
+    @extend .alinearTextoProductos;
+}
+
+.prodb {
+    grid-area: prodb;
+    @extend .alinearProduc;
+}
+
+.texto-prodb {
+    grid-area: prodb;
+    display: flex;
+    margin: 20px;
+}
+
+.texto-prodb ul li {
+    @extend .alinearTextoProductos;
+}
+
+.prodc {
+    grid-area: prodc;
+    @extend .alinearProduc;
+}
+
+.texto-prodc {
+    grid-area: prodc;
+    display: flex;
+    margin: 20px;
+}
+
+.texto-prodc ul li {
+    @extend .alinearTextoProductos;
+}

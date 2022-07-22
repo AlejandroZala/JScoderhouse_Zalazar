@@ -1,0 +1,57 @@
+@import "../variables/variables";
+
+body {
+    background-color: $azul;
+}
+
+.gridBody {
+    display: grid;
+    grid-template-areas: "header header header"
+        "main main main"
+        "footer footer footer";
+}
+
+header {
+    grid-area: header;
+}
+
+.gridHeader {
+    display: grid;
+    grid-template-areas: "logo titulo navHeader";
+    @extend .gradienteHeaderFooter;
+}
+
+/*Pagina Inicio*/
+.titulo {
+    grid-area: titulo;
+    @extend .alinearCajaTextImagVid;
+    font-family: $fontArial;
+    padding: 10px;
+    animation-name: titulo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+}
+
+@keyframes titulo {
+    0% {
+        color: $negro;
+    }
+
+    25% {
+        color: $rojoOscuro;
+    }
+
+    50% {
+        color: $rojo;
+    }
+
+    75% {
+        color: $rojoOscuro
+    }
+}
+
+.navHeader {
+    grid-area: navHeader;
+    display: flex;
+}

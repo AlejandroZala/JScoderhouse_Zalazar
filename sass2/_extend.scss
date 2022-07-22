@@ -1,0 +1,43 @@
+@import "../variables/variables";
+
+.gradienteHeaderFooter {
+    background-image: linear-gradient(to top, $azul, $celeste, $celesteClaro, $celesteClaro, $celeste, $azul);
+}
+
+.alinearCajaTextImagVid {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.alienarCajaListaPrincipal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.alinearTextoProductos {
+    list-style: none;
+    text-align: center;
+    margin: 8px;
+    font-family: $fontArial;
+    font-size: medium;
+    color: $negro;
+}
+
+.alinearProduc {
+    display: flex;
+    margin: 30px 50px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.alinearCajaText-a-b {
+    margin: 10px;
+    padding: 5px;
+    font-family: $fontArial;
+    font-size: large;
+    color: $negro;
+}

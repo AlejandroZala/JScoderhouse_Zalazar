@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #b1dcf8; }
+
+.gridBody {
+  display: grid;
+  grid-template-areas: "header header header"
+ "footer footer footer"; }
+
+header {
+  grid-area: header;
+  background-color: #5da9fa; }
+
+
+.gridHeader {
+  display: grid;
+  grid-template-areas: "logo titulo navHeader"; }
+
+/*Pagina Inicio*/
+.titulo {
+  grid-area: titulo;
+  font-family: arial;
+  padding: 10px;
+ }
+
+
+.navHeader {
+  grid-area: navHeader;
+  display: flex; }
+
+main {
+  grid-area: main; }
+
+.gridMain {
+  display: grid;
+  grid-template-areas: "texto"
+ "imag";
+  background-color: #d5f1fc; }
+
+.gridMainEmpresa {
+  display: flex;
+  background-color: #d5f1fc; }
+
+.gridMainProductos {
+  display: grid;
+  grid-template-areas: "proda prodb prodc";
+  background-color: #d5f1fc; }
+
+.caja-imagen {
+  grid-area: imag;
+  /* margin-top: 10px; */
+  margin-bottom: 30px; }
+
+.caja-lista-principal {
+  grid-area: texto;
+  margin: 30px 30px; }
+  .caja-lista-principal ul {
+    list-style: none; }
+    .caja-lista-principal ul li {
+      margin-top: 5px;
+      font-family: arial;
+      font-size: large;
+      color: black;
+      text-align: center;
+      margin-bottom: 5px; }
+
+/*Pagina Contacto*/
+.cajaFormulario {
+  padding: 5%;
+  background-color: #d5f1fc; }
+
+/*Pagina Empresa*/
+.caja-marco {
+  background-color: #d5f1fc;
+  font-family: arial;
+  text-align: center;
+  color: black;
+  padding: 20px; }
+
+.caja-texto {
+  margin: 20px;
+  padding: 5px;
+  font-size: larger; }
+
+/*Pagina Como Comprar*/
+.caja-texto-b {
+  text-align: left; }
+
+/*Pagina Productos*/
+.cajaPrecio {
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  text-justify: center;
+  align-items: center;
+  background-color: #d2edf5;
+  border-style: solid;
+  border-radius: 8px;}
+
+
+
+.precio {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: arial; }
+
+.proda {
+  grid-area: proda; }
+
+.texto-proda {
+  grid-area: proda;
+  display: flex;
+  margin: 20px; }
+
+.prodb {
+  grid-area: prodb; }
+
+.texto-prodb {
+  grid-area: prodb;
+  display: flex;
+  margin: 20px; }
+
+.prodc {
+  grid-area: prodc; }
+
+.texto-prodc {
+  grid-area: prodc;
+  display: flex;
+  margin: 20px; }
+
+.alinearCajaTextImagVid, .titulo, .caja-imagen, .caja-video {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center; }
+
+.alienarCajaListaPrincipal, .caja-lista-principal, .caja-lista-principal ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.alinearTextoProductos, .texto-proda ul li, .texto-prodb ul li, .texto-prodc ul li {
+  list-style: none;
+  text-align: center;
+  margin: 8px;
+  font-family: arial;
+  font-size: medium;
+  color: black; }
+
+.alinearProduc, .proda, .prodb, .prodc {
+  display: flex;
+  margin: 70px 30px;
+  flex-direction: column;
+  align-items: center; }
+
+.alinearCajaText-a-b, .caja-texto-a, .caja-texto-b {
+  margin: 10px;
+  padding: 5px;
+  font-family: arial;
+  font-size: large;
+  color: black; }
+
+footer {
+  grid-area: footer;
+  background-color: #5da9fa; }
+
+.gridFooter {
+  display: grid;
+  grid-template-areas: "navFooter none redes"; }
+
+.navFooter {
+  grid-area: navFooter;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 5%;
+  flex-direction: column;
+  justify-content: left;
+  align-content: space-between; }
+  .navFooter li a {
+    padding: 5px;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    font-family: arial; }
+
+.redes {
+  grid-area: redes;
+  margin: auto; }
+
+.imgFace {
+  margin: 10px;
+  width: 50px;
+  height: 50px; }
+
+.imgInsta {
+  margin: 10px;
+  width: 50px;
+  height: 50px; }
+
+.imgWhats {
+  margin: 10px;
+  width: 50px;
+  height: 50px; }
+

@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import "variables/variables";
+@import "partials/header";
+@import "partials/main";
+@import "partials/footer";
+@import "sass2/condicionales";
+@import "sass2/extend";
+@import "sass2/maps";
+@import "sass2/mixins";
+@import "sass2/operaciones";
+
+
+@media screen and (max-width:768px) {
+    .gridBody {
+        display: grid;
+        grid-template-areas: "header header"
+            "main main"
+            "main main"
+            "footer footer";
+    }
+
+    .gridHeader {
+        display: grid;
+        grid-template-areas: "titulo navHeader";
+    }
+
+    .gridMain {
+        display: grid;
+        grid-template-areas: "texto texto"
+            "imag video";
+    }
+
+    .gridFooter {
+        display: grid;
+        grid-template-areas: "navFooter redes";
+    }
+
+    .gridMainProductos {
+        display: grid;
+        grid-template-areas: "proda prodb"
+            "prodc none";
+    }
+}
+
+@media screen and (max-width:635px) {
+    .gridBody {
+        display: grid;
+        grid-template-areas: "header"
+            "header"
+            "main"
+            "main"
+            "main"
+            "footer"
+            "footer";
+    }
+
+    .gridHeader {
+        display: grid;
+        grid-template-areas: "titulo"
+            "navHeader";
+    }
+
+    .gridMain {
+        display: grid;
+        grid-template-areas: "imag"
+            "texto"
+            "video";
+    }
+
+    .gridFooter {
+        display: grid;
+        grid-template-areas: "navFooter"
+            "redes";
+    }
+
+    .gridMainProductos {
+        display: grid;
+        grid-template-areas: "proda"
+            "prodb"
+            "prodc";
+    }
+}

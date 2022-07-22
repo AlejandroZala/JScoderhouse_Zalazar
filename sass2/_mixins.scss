@@ -1,0 +1,7 @@
+@import "../variables/variables";
+
+@mixin margen-dimensiones-redes {
+    margin: $margenFooter;
+    width: $anchoFooter;
+    height: $altoFooter;
+}
