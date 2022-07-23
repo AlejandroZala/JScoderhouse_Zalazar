@@ -14,23 +14,25 @@ header {
   grid-area: header;
   background-color: #5da9fa; }
 
-
 .gridHeader {
   display: grid;
   grid-template-areas: "logo titulo navHeader"; }
-
-/*Pagina Inicio*/
-.titulo {
-  grid-area: titulo;
-  font-family: arial;
-  padding: 10px;
- }
-
 
 .navHeader {
   grid-area: navHeader;
   display: flex; }
 
+.titulo {
+  grid-area: titulo;
+  font-family: arial;
+  padding: 10px; }
+
+.navbar-light .navbar-nav .nav-link {
+  font-size: 20px;
+  color: white;
+  }
+
+/*Pagina Inicio*/
 main {
   grid-area: main; }
 
