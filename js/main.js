@@ -18,11 +18,14 @@ function armadoListadoProductos() {
             aux +  `
                 <div class="col-12 col-md-4 mb-5 d-flex justify-content-center">
                     <div class="card text-dark" style="width: 18rem;">
+                        <img class="card-img-top" src="${productos[i].img}" alt="Card image cap">
                         <div class="card-body">
                             <h3>${productos[i].nombre}</h3>
-                            <b>Precio: $${productos[i].precio}</b>
-                            <p>id: ${productos[i].id}</p>
-                            <button onclick="agregarAlCarro({id: ${productos[i].id}, nombre: '${productos[i].nombre}', precio: ${productos[i].precio}});" class="btn btn-primary" type="submit">Agregar al carro</button>
+                            <div>
+                                <b>Precio: $${productos[i].precio}</b>
+                                <p>id: ${productos[i].id}</p>
+                                <button onclick="agregarAlCarro({id: ${productos[i].id}, nombre: '${productos[i].nombre}', precio: ${productos[i].precio}});" class="btn btn-primary" type="submit">Agregar al carro</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -42,7 +45,7 @@ function armadoProductosEnCarro() {
         aux = 
             aux +  `
                     <div class="card text-dark d-flex justify-content-center" style="width: 100%;">
-                        <div class="card-body">
+                        <div class="cajaPrecioIdBoton">
                             <h5>${productosEnCarro[i].nombre}</h5>
                             <b>Precio: $${productosEnCarro[i].precio}</b>
                             <br>

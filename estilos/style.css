@@ -92,6 +92,14 @@ main {
   text-align: left; }
 
 /*Pagina Productos*/
+
+.cajaPrecioIdBoton {
+  padding: 10px;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  align-content: space-between;
+}
 .cajaPrecio {
   width: 150px;
   height: 35px;
