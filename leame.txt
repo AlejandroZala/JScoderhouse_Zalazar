@@ -1,12 +1,11 @@
-(main.js) Aplcación usando DOM 
+(main.js) Aplcación usando DOM y LOCALSTORAGE
 
-1-Creo archivo constructor_productos.js (contiene el class constructor de mi array de objetos)
-2-Creo archivo array_productos.js       (cargo mi array con mis objetos datos)
-3-Incorporo en la pagina de productos de mi web un div desde el JS todos los productos de mi array de objetos.
-4-Acciones interactuando desde el DOM en la pagina de productos:
-        *Agregar  o quitar productos seleccionados del carrito.
-        *Calcular la suma de precios de los elemntos en el carro.
-        *Ver en la pagina la lista de los productos a comprar y el precio total de la compra.
+1-Modifico archivo constructor_productos.js, ahora contiene propiedad img, capacidad y stock.
+2-Modifico al archivo array_productos.js, cargo el array con las imágenes de los roductos y las opciones de capacidad de envase y stock.
+3-Incorporo en la pagina de productos todas las imagenes de cada poroducto.
+4-El archivo main.js tiene el algorítmo adecuado para mejar el LOCALSTORAGE:
+        *Cada vez que agrego al carro queda esto en el LOCALSTORAGE y obtengo el Valor Total de la Compra.
+        *Cada vez que quito algun producto del carro, tomo el contenido del LOCALSTORAGE y recalculo el Valor Total de la Compra.
 
 
 --------------------------------------------------------------------------------------------------------------------
