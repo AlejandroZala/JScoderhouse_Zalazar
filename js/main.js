@@ -48,8 +48,7 @@ function armadoProductosEnCarro() {
                         <div class="cajaPrecioIdBoton">
                             <h5>${productosEnCarro[i].nombre}</h5>
                             <b>Precio: $${productosEnCarro[i].precio}</b>
-                            <br>
-                            <button onclick="borrarDelCarro(${i})" class="btn btn-primary" type="submit">Quitar del carro</button>
+                            <button onclick="borrarDelCarro(${i})" class="btn btn-danger" type="submit">Quitar del carro</button>
                         </div>
                     </div>
                 `
