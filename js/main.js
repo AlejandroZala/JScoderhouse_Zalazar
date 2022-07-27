@@ -20,7 +20,7 @@ function armadoListadoProductos() {
                     <div class="card text-dark" style="width: 18rem;">
                         <img class="card-img-top" src="${productos[i].img}" alt="Card image cap">
                         <div class="card-body">
-                            <h3>${productos[i].nombre}</h3>
+                            <h3 style="height: 60px">${productos[i].nombre}</h3>
                             <div>
                                 <b>Precio: $${productos[i].precio}</b>
                                 <p>id: ${productos[i].id}</p>
