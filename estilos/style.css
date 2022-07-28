@@ -37,9 +37,9 @@ main {
   grid-area: main; }
 
 .gridMain {
-  display: grid;
-  grid-template-areas: "texto"
- "imag";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #d5f1fc; }
 
 .gridMainEmpresa {
@@ -76,7 +76,17 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-content: space-between;
+  /* align-content: space-between; */
+}
+
+.cajaCompraTotal{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  background-color: blue;
+  padding: 20px;
+  color: white;
 }
 
 /*Pagina Contacto*/

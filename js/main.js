@@ -47,8 +47,8 @@ function armadoProductosEnCarro() {
                     <div class="card text-dark d-flex justify-content-center" style="width: 100%;">
                         <div class="cajaPrecioIdBoton">
                             <h5>${productosEnCarro[i].nombre}</h5>
-                            <b>Precio: $${productosEnCarro[i].precio}</b>
-                            <button onclick="borrarDelCarro(${i})" class="btn btn-danger" type="submit">Quitar del carro</button>
+                            <h5>Precio: $${productosEnCarro[i].precio}</h5>
+                            <button onclick="borrarDelCarro(${i})" class="btn btn-warning" type="submit">Quitar del carro</button>
                         </div>
                     </div>
                 `
@@ -64,8 +64,12 @@ function agregarAlCarro(producto){
 
     precioFinalCompra = 
                 document.getElementById("total").innerHTML = `
-                        <h2 class="bg-primary" style="padding: 20px;">Precio Total de la Compra: $${totalPagar}</h2>
-                        `
+                <div class="cajaCompraTotal">
+                    <h4>Total de la Compra:</h4>
+                    <h4>Precio: $${totalPagar}</h4>
+                    <button onclick="" class="btn btn-danger" type="submit">CONFIRMAR LA COMPRA</button>
+                </div>   
+                `
     }
 
 function borrarDelCarro(id) {
@@ -76,6 +80,10 @@ function borrarDelCarro(id) {
 
     precioFinalCompra = 
                 document.getElementById("total").innerHTML = `
-                        <h2 class="bg-primary" style="padding: 20px;">Precio Total de la Compra: $${totalPagar}</h2>
-                        `
+                <div class="cajaCompraTotal">
+                    <h4>Total de la Compra:</h4>
+                    <h4>Precio: $${totalPagar}</h4>
+                    <button onclick="" class="btn btn-danger" type="submit">CONFIRMAR LA COMPRA</button>
+                </div>   
+                `
     }
