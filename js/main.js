@@ -10,6 +10,17 @@ if(!aux) {
     armadoProductosEnCarro();
 }
 
+
+
+// function manejeElClick() {
+//     Swal.fire({
+//       title: 'Confirmación de compra',
+//       text: 'Está seguro que desea confirmar la compra?',
+//       icon: 'success',
+//       confirmButtonText: 'Aceptar',
+//     });
+//   }
+
 //------------Armado de Lista de Productos en HTML---------------
 function armadoListadoProductos() {
     let aux = '';
@@ -39,6 +50,15 @@ function armadoListadoProductos() {
 
 //---------FUNCIONES PARA EL CARRO-------------
 
+function manejeElClick() {
+    Swal.fire({
+    title: 'El pago fué realizado con éxito!',
+    text: 'Muchas gracias por su compra!',
+    icon: 'success',
+    confirmButtonText: 'Aceptar',
+    });
+ }
+
 function armadoProductosEnCarro() {
     let aux = '';
     for (let i=0; i < productosEnCarro.length; i++){
@@ -67,7 +87,7 @@ function agregarAlCarro(producto){
                 <div class="cajaCompraTotal">
                     <h4>Total de la Compra:</h4>
                     <h4>Precio: $${totalPagar}</h4>
-                    <button onclick="" class="btn btn-danger" type="submit">CONFIRMAR LA COMPRA</button>
+                    <button onclick="manejeElClick()" class="btn btn-danger">CONFIRMAR LA COMPRA</button>
                 </div>   
                 `
     }
@@ -83,7 +103,7 @@ function borrarDelCarro(id) {
                 <div class="cajaCompraTotal">
                     <h4>Total de la Compra:</h4>
                     <h4>Precio: $${totalPagar}</h4>
-                    <button onclick="" class="btn btn-danger" type="submit">CONFIRMAR LA COMPRA</button>
+                    <button onclick="manejeElClick()" class="btn btn-danger">CONFIRMAR LA COMPRA</button>
                 </div>   
                 `
     }
