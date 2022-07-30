@@ -2,26 +2,9 @@
 let aux = localStorage.getItem('productosEnCarro');
 let productosEnCarro = [];
 
-if(!aux) {
-    productosEnCarro = [];
-    
-}else{
-    productosEnCarro = JSON.parse(aux);
-    armadoProductosEnCarro();
-}
-
-
-
-// function manejeElClick() {
-//     Swal.fire({
-//       title: 'Confirmación de compra',
-//       text: 'Está seguro que desea confirmar la compra?',
-//       icon: 'success',
-//       confirmButtonText: 'Aceptar',
-//     });
-//   }
 
 //------------Armado de Lista de Productos en HTML---------------
+
 function armadoListadoProductos() {
     let aux = '';
     for (let i=0; i < productos.length; i++){
@@ -49,6 +32,14 @@ function armadoListadoProductos() {
 
 
 //---------FUNCIONES PARA EL CARRO-------------
+
+if(!aux) {
+    productosEnCarro = [];
+    
+}else{
+    productosEnCarro = JSON.parse(aux);
+    armadoProductosEnCarro();
+}
 
 function manejeElClick() {
     Swal.fire({
@@ -85,10 +76,18 @@ function agregarAlCarro(producto){
     precioFinalCompra = 
                 document.getElementById("total").innerHTML = `
                 <div class="cajaCompraTotal">
-                    <h4>Total de la Compra:</h4>
-                    <h4>Precio: $${totalPagar}</h4>
-                    <button onclick="manejeElClick()" class="btn btn-danger">CONFIRMAR LA COMPRA</button>
-                </div>   
+                    <div>
+                        <h4>Total de la Compra:</h4>
+                        <h4>Precio: $${totalPagar}</h4>
+                    </div>
+                    <div>
+                        <h4>Un pago de: $${totalPagar}</h4>
+                        
+                    </div>
+                    <div>
+                        <button onclick="manejeElClick()" class="btn btn-danger">CONFIRMAR LA COMPRA</button>   
+                    </div>
+                </div>
                 `
     }
 
@@ -101,9 +100,13 @@ function borrarDelCarro(id) {
     precioFinalCompra = 
                 document.getElementById("total").innerHTML = `
                 <div class="cajaCompraTotal">
-                    <h4>Total de la Compra:</h4>
-                    <h4>Precio: $${totalPagar}</h4>
-                    <button onclick="manejeElClick()" class="btn btn-danger">CONFIRMAR LA COMPRA</button>
-                </div>   
+                    <div>
+                        <h4>Total de la Compra:</h4>
+                        <h4>Precio: $${totalPagar}</h4>
+                    </div>
+                    <div>
+                        <button onclick="manejeElClick()" class="btn btn-danger">CONFIRMAR LA COMPRA</button>   
+                    </div>
+                </div>
                 `
     }
