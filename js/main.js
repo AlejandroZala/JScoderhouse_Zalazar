@@ -33,10 +33,9 @@ function armadoListadoProductos() {
 
 //---------FUNCIONES PARA EL CARRO-------------
 
-if(!aux) {
-    productosEnCarro = [];
-    
-}else{
+!aux ? productosEnCarro = [] : parseArmadoProductosEnCarro ();      //----USO ORDENADOR TERNARIO
+
+function parseArmadoProductosEnCarro () {
     productosEnCarro = JSON.parse(aux);
     armadoProductosEnCarro();
 }

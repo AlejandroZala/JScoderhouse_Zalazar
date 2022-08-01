@@ -1,6 +1,5 @@
 //Creo el Array de productos con el constructor productos
 
-
 const licores = [ 
     new Producto(1, "../imagenes/licor_dulce_leche.png", "Licor de Dulce de Leche", 500, 600, 50),
     new Producto(2, "../imagenes/licor_chocolate.png", "Licor de Chocolate", 500, 700, 60),
@@ -13,4 +12,5 @@ const dulces = [
     new Producto(6, "../imagenes/dulce_frutos_bosque.png", "Dulce de Frutos del Bosque", 250, 650, 40),
 ]
 
+//---USO DE SPREAD PARA JUNTAR LICORES + DULCES EN MI ARRAY PRINCIPAL
 const productos = [...licores, ...dulces]
