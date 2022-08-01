@@ -1,11 +1,10 @@
-(main.js) Aplcación usando DOM y LOCALSTORAGE
+(main.js) Clase 12 operadores avanzados
 
-1-Modifico archivo constructor_productos.js, ahora contiene propiedad img, capacidad y stock.
-2-Modifico al archivo array_productos.js, cargo el array con las imágenes de los roductos y las opciones de capacidad de envase y stock.
-3-Incorporo en la pagina de productos todas las imagenes de cada poroducto.
-4-El archivo main.js tiene el algorítmo adecuado para mejar el LOCALSTORAGE:
-        *Cada vez que agrego al carro queda esto en el LOCALSTORAGE y obtengo el Valor Total de la Compra.
-        *Cada vez que quito algun producto del carro, tomo el contenido del LOCALSTORAGE y recalculo el Valor Total de la Compra.
+1-Creo un array licores y otro array productos (por categoría)
+2-Uso SPREAD para unir el array de licores y el array de dulces y creo el array productos.
+3-utilizo el operador terniario para dejar de usar un if en el main.js en la parte del armado del carrito.
+4-Uso boton naranja para quitar del carro y boton rojo para finalizar compra y luego con un SweetAlert aviso que la compra fue realizada con éxito.
+
 
 
 --------------------------------------------------------------------------------------------------------------------
