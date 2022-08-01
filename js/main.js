@@ -81,8 +81,11 @@ function agregarAlCarro(producto){
                         <h4>Precio: $${totalPagar}</h4>
                     </div>
                     <div>
-                        <h4>Un pago de: $${totalPagar}</h4>
-                        
+                        <select class="form-select form-select-lg"  aria-label="Default select example">
+                            <option selected>Elija una opción de pago</option>
+                            <option value="1">1 cuota de: $${totalPagar}</option>
+                            <option value="2">6 cuotas de: $${totalPagar}/6</option>
+                        </select>
                     </div>
                     <div>
                         <button onclick="manejeElClick()" class="btn btn-danger">CONFIRMAR LA COMPRA</button>   
@@ -103,6 +106,13 @@ function borrarDelCarro(id) {
                     <div>
                         <h4>Total de la Compra:</h4>
                         <h4>Precio: $${totalPagar}</h4>
+                    </div>
+                    <div>
+                        <select class="form-select form-select-lg"  aria-label="Default select example">
+                            <option selected>Elija una opción de pago</option>
+                            <option value="1">1 cuota de: $${totalPagar}</option>
+                            <option value="2">6 cuotas de: $${totalPagar}/6</option>
+                        </select>
                     </div>
                     <div>
                         <button onclick="manejeElClick()" class="btn btn-danger">CONFIRMAR LA COMPRA</button>   
