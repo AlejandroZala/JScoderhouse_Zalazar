@@ -46,6 +46,7 @@ function manejeElClick() {
     text: 'Muchas gracias por su compra!',
     icon: 'success',
     confirmButtonText: 'Aceptar',
+    confirmButtonColor: "#0000FF",
     });
  }
 
