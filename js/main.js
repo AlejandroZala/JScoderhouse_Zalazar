@@ -28,12 +28,14 @@ function armadoListadoProductos() {
         document.getElementById('tienda').innerHTML = aux;
     };
     
-    armadoListadoProductos();
+armadoListadoProductos();
 
 
 //---------FUNCIONES PARA EL CARRO-------------
 
 !aux ? productosEnCarro = [] : parseArmadoProductosEnCarro ();      //----USO ORDENADOR TERNARIO
+
+
 
 function parseArmadoProductosEnCarro () {
     productosEnCarro = JSON.parse(aux);
@@ -52,6 +54,7 @@ function manejeElClick() {
 
 function armadoProductosEnCarro() {
     let aux = '';
+
     for (let i=0; i < productosEnCarro.length; i++){
         aux = 
             aux +  `
@@ -59,7 +62,7 @@ function armadoProductosEnCarro() {
                         <div class="cajaPrecioIdBoton">
                             <h5>${productosEnCarro[i].nombre}</h5>
                             <h5>Precio: $${productosEnCarro[i].precio}</h5>
-                            <button onclick="borrarDelCarro(${i})" class="btn btn-warning" type="submit">Quitar del carro</button>
+                            <button id="myBtn" onclick="borrarDelCarro(${i})" class="btn btn-warning" type="submit">Quitar del carro</button>
                         </div>
                     </div>
                 `
@@ -100,6 +103,15 @@ function borrarDelCarro(id) {
     armadoProductosEnCarro();
     const totalPagar = productosEnCarro.map(item => item.precio).reduce((prev, curr) => prev + curr, 0);
 
+    //----------------TOASTIFY quitar del carro---------------
+    Toastify({
+        text: "Ha quitado un producto del carrito" ,
+        duration: 3000,
+        style: {
+            background: 'linear-gradient(to right, #00b09b, #96c92d)'
+            }
+    }).showToast();
+    
     precioFinalCompra = 
                 document.getElementById("total").innerHTML = `
                 <div class="cajaCompraTotal">
