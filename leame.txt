@@ -1,11 +1,15 @@
+(main.js) Clase 13 Librerias
+
+1-Utilizo Toastify al momento de hacer click en el botón de quitar del carro para hace énfasis en el hecho de sacar un producto del carro
+2-Utilizo SweetAlert como aviso que la compra fue realizada con éxito.
+
+----------------------------------------------------------------------------------------------
 (main.js) Clase 12 operadores avanzados
 
 1-Creo un array licores y otro array productos (por categoría)
 2-Uso SPREAD para unir el array de licores y el array de dulces y creo el array productos.
 3-utilizo el operador terniario para dejar de usar un if en el main.js en la parte del armado del carrito.
-4-Uso boton naranja para quitar del carro y boton rojo para finalizar compra y luego con un SweetAlert aviso que la compra fue realizada con éxito.
-
-
+4-Uso boton naranja para quitar del carro y boton rojo para finalizar compra.
 
 --------------------------------------------------------------------------------------------------------------------
 (main2.js)
