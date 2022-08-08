@@ -1,0 +1,8 @@
+[
+    {"id": 1, "img": "../imagenes/licor_dulce_leche.png", "nombre": "Licor de Dulce de Leche", "capacidad": 500, "precio": 600, "stock": 50},
+    {"id": 2, "img": "../imagenes/licor_chocolate.png", "nombre": "Licor de Chocolate", "capacidad": 500, "precio": 700, "stock": 60},
+    {"id": 3, "img": "../imagenes/licor_chocolate_blanco.png", "nombre": "Licor de Chocolate Blanco", "capacidad": 500, "precio": 800, "stock": 60},
+    {"id": 4, "img": "../imagenes/dulce_frutilla.png", "nombre": "Dulce de Frutilla", "capacidad": 250, "precio": 450, "stock": 50},
+    {"id": 5, "img": "../imagenes/dulce_frambuesa.png", "nombre": "Dulce de Frambuesa", "capacidad": 250, "precio": 550, "stock": 70},
+    {"id": 6, "img": "../imagenes/dulce_frutos_bosque.png", "nombre": "Dulce de Frutos del Bosque", "capacidad": 250, "precio": 650, "stock": 40}
+]
