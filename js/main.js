@@ -1,11 +1,17 @@
 //----CONFIGURACION LOCALSTORAGE---
 let aux = localStorage.getItem('productosEnCarro');
+
+
 let productosEnCarro = [];
 
 
 //------------Armado de Lista de Productos en HTML---------------
 
-function armadoListadoProductos() {
+async function armadoListadoProductos() {
+    const res = await fetch('./data.json');
+    const productos = await res.json();
+    console.log(productos);
+
     let aux = '';
     for (let i=0; i < productos.length; i++){
         aux = 
@@ -26,7 +32,7 @@ function armadoListadoProductos() {
                 `
         }
         document.getElementById('tienda').innerHTML = aux;
-    };
+    }
     
 armadoListadoProductos();
 

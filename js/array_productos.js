@@ -13,4 +13,4 @@ const dulces = [
 ]
 
 //---USO DE SPREAD PARA JUNTAR LICORES + DULCES EN MI ARRAY PRINCIPAL
-const productos = [...licores, ...dulces]
+// const productos = [...licores, ...dulces]
