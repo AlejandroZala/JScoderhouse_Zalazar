@@ -1,12 +1,8 @@
 //----CONFIGURACION LOCALSTORAGE---
 let aux = localStorage.getItem('productosEnCarro');
-
-
 let productosEnCarro = [];
 
-
 //------------Armado de Lista de Productos en HTML---------------
-
 async function armadoListadoProductos() {
     const res = await fetch('./data.json');
     const productos = await res.json();
@@ -36,19 +32,15 @@ async function armadoListadoProductos() {
     
 armadoListadoProductos();
 
-
 //---------FUNCIONES PARA EL CARRO-------------
-
 !aux ? productosEnCarro = [] : parseArmadoProductosEnCarro ();      //----USO ORDENADOR TERNARIO
-
-
 
 function parseArmadoProductosEnCarro () {
     productosEnCarro = JSON.parse(aux);
     armadoProductosEnCarro();
 }
 
-function manejeElClick() {
+function confirmaCompra() {
     Swal.fire({
     title: 'El pago fué realizado con éxito!',
     text: 'Muchas gracias por su compra!',
@@ -78,38 +70,13 @@ function armadoProductosEnCarro() {
 
 function agregarAlCarro(producto){
     productosEnCarro.push(producto);
-    localStorage.setItem('prodcutosEnCarro', JSON.stringify(productosEnCarro));
-    armadoProductosEnCarro();
-    const totalPagar = productosEnCarro.map(item => item.precio).reduce((prev, curr) => prev + curr, 0);
 
-    precioFinalCompra = 
-                document.getElementById("total").innerHTML = `
-                <div class="cajaCompraTotal">
-                    <div>
-                        <h4>Total de la Compra:</h4>
-                        <h4>Precio: $${totalPagar}</h4>
-                    </div>
-                    <div>
-                        <select class="form-select form-select-lg"  aria-label="Default select example">
-                            <option selected>Elija una opción de pago</option>
-                            <option value="1">1 cuota de: $${totalPagar}</option>
-                            <option value="2">6 cuotas de: $${totalPagar}/6</option>
-                        </select>
-                    </div>
-                    <div>
-                        <button onclick="manejeElClick()" class="btn btn-danger">CONFIRMAR LA COMPRA</button>   
-                    </div>
-                </div>
-                `
+    formasDePagoCompra();
     }
 
 function borrarDelCarro(id) {
     productosEnCarro.splice(id,1);
-    localStorage.setItem('prodcutosEnCarro', JSON.stringify(productosEnCarro));
-    armadoProductosEnCarro();
-    const totalPagar = productosEnCarro.map(item => item.precio).reduce((prev, curr) => prev + curr, 0);
 
-    //----------------TOASTIFY quitar del carro---------------
     Toastify({
         text: "Ha quitado un producto del carrito" ,
         duration: 3000,
@@ -118,23 +85,33 @@ function borrarDelCarro(id) {
             }
     }).showToast();
     
-    precioFinalCompra = 
-                document.getElementById("total").innerHTML = `
-                <div class="cajaCompraTotal">
-                    <div>
-                        <h4>Total de la Compra:</h4>
-                        <h4>Precio: $${totalPagar}</h4>
+    formasDePagoCompra();
+    }
+
+    function formasDePagoCompra(){
+        localStorage.setItem('prodcutosEnCarro', JSON.stringify(productosEnCarro));
+        armadoProductosEnCarro();
+    
+        let totalPagar = productosEnCarro.map(item => item.precio).reduce((prev, curr) => prev + curr, 0);
+        let totalPagar6 = totalPagar/12;
+    
+        precioFinalCompra = 
+                    document.getElementById("total").innerHTML = `
+                    <div class="cajaCompraTotal">
+                        <div>
+                            <h4>Total de la Compra:</h4>
+                            <h4>Precio: $${totalPagar}</h4>
+                        </div>
+                        <div>
+                            <select class="form-select form-select-lg"  aria-label="Default select example">
+                                <option selected>Elija una opción de pago</option>
+                                <option value="1">1 cuota de: $${totalPagar}</option>
+                                <option value="2">6 cuotas de: $${totalPagar6.toFixed(2)}</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button onclick="confirmaCompra()" class="btn btn-danger">CONFIRMAR LA COMPRA</button>   
+                        </div>
                     </div>
-                    <div>
-                        <select class="form-select form-select-lg"  aria-label="Default select example">
-                            <option selected>Elija una opción de pago</option>
-                            <option value="1">1 cuota de: $${totalPagar}</option>
-                            <option value="2">6 cuotas de: $${totalPagar}/6</option>
-                        </select>
-                    </div>
-                    <div>
-                        <button onclick="manejeElClick()" class="btn btn-danger">CONFIRMAR LA COMPRA</button>   
-                    </div>
-                </div>
-                `
+                    `
     }
