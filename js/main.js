@@ -71,6 +71,14 @@ function armadoProductosEnCarro() {
 function agregarAlCarro(producto){
     productosEnCarro.push(producto);
 
+    Toastify({
+        text: "Ha agregado un producto al carrito" ,
+        duration: 3000,
+        style: {
+            background: 'radial-gradient(circle at 48.7% 44.3%, rgb(30, 144, 231) 0%, rgb(56, 113, 209) 22.9%, rgb(38, 76, 140) 76.7%, rgb(31, 63, 116) 100.2%)'
+            }
+    }).showToast();
+
     formasDePagoCompra();
     }
 
