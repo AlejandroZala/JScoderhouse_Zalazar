@@ -1,3 +1,11 @@
+(main.js) Clase 15 Fetch y Async
+
+1- Creo archivo data.json con el array de productos.
+2- Uso de Async function para hacer un fetch e ir a buscar los productos del data.json
+3- Utilizo Toastify para el momento de agrgar productos al carro.
+4- Creo funcion formasDePagoCompra para optimizar el código.
+
+-----------------------------------------------------------------------------------------------
 (main.js) Clase 13 Librerias
 
 1-Utilizo Toastify al momento de hacer click en el botón de quitar del carro para hace énfasis en el hecho de sacar un producto del carro
