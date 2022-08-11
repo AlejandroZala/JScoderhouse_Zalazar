@@ -70,7 +70,6 @@ function armadoProductosEnCarro() {
 
 function agregarAlCarro(producto){
     productosEnCarro.push(producto);
-
     Toastify({
         text: "Ha agregado un producto al carrito" ,
         duration: 3000,
@@ -78,13 +77,11 @@ function agregarAlCarro(producto){
             background: 'radial-gradient(circle at 48.7% 44.3%, rgb(30, 144, 231) 0%, rgb(56, 113, 209) 22.9%, rgb(38, 76, 140) 76.7%, rgb(31, 63, 116) 100.2%)'
             }
     }).showToast();
-
     formasDePagoCompra();
     }
 
 function borrarDelCarro(id) {
     productosEnCarro.splice(id,1);
-
     Toastify({
         text: "Ha quitado un producto del carrito" ,
         duration: 3000,
@@ -92,7 +89,6 @@ function borrarDelCarro(id) {
             background: 'linear-gradient(to right, #00b09b, #96c92d)'
             }
     }).showToast();
-    
     formasDePagoCompra();
     }
 
@@ -101,7 +97,7 @@ function borrarDelCarro(id) {
         armadoProductosEnCarro();
     
         let totalPagar = productosEnCarro.map(item => item.precio).reduce((prev, curr) => prev + curr, 0);
-        let totalPagar6 = totalPagar/12;
+        let totalPagar6 = totalPagar*1.30/12;
     
         precioFinalCompra = 
                     document.getElementById("total").innerHTML = `
@@ -114,7 +110,7 @@ function borrarDelCarro(id) {
                             <select class="form-select form-select-lg"  aria-label="Default select example">
                                 <option selected>Elija una opción de pago</option>
                                 <option value="1">1 cuota de: $${totalPagar}</option>
-                                <option value="2">6 cuotas de: $${totalPagar6.toFixed(2)}</option>
+                                <option value="2">6 cuotas de: $${totalPagar6.toFixed(2)}   (30% de recargo)</option>
                             </select>
                         </div>
                         <div>
