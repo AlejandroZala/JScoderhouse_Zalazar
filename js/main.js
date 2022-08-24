@@ -108,7 +108,7 @@ function borrarDelCarro(id) {
         armadoProductosEnCarro();
     
         let totalPagar = productosEnCarro.map(item => item.precio).reduce((prev, curr) => prev + curr, 0);
-        let totalPagar6 = totalPagar*1.30/12;
+        let totalPagar6 = totalPagar*1.30/6;
     
         precioFinalCompra = 
                     document.getElementById("total").innerHTML = `
@@ -121,7 +121,7 @@ function borrarDelCarro(id) {
                             <select class="form-select form-select-lg"  aria-label="Default select example">
                                 <option selected>Elija una opción de pago</option>
                                 <option value="1">1 cuota de: $${totalPagar}</option>
-                                <option value="2">6 cuotas de: $${totalPagar6.toFixed(2)}   (30% de recargo)</option>
+                                <option value="2">6 cuotas de: $${totalPagar6.toFixed(2)} - (30% de recargo) - Total: $${totalPagar6*6}</option>
                             </select>
                         </div>
                         <div>
