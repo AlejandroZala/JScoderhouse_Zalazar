@@ -5,11 +5,6 @@
 body {
   background-color: #b1dcf8; }
 
-.gridBody {
-  display: grid;
-  grid-template-areas: "header header header"
- "footer footer footer"; }
-
 header {
   grid-area: header;
   background-color: #5da9fa; }
@@ -44,11 +39,6 @@ main {
 
 .gridMainEmpresa {
   display: flex;
-  background-color: #d5f1fc; }
-
-.gridMainProductos {
-  display: grid;
-  grid-template-areas: "proda prodb prodc";
   background-color: #d5f1fc; }
 
 .caja-imagen {
