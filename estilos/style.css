@@ -53,7 +53,6 @@ main {
 
 .caja-imagen {
   grid-area: imag;
-  /* margin-top: 10px; */
   margin-bottom: 30px; }
 
 .caja-lista-principal {
@@ -70,20 +69,12 @@ main {
       margin-bottom: 5px; }
 
 /*Pagina Productos*/
-
-.cajaPrecioIdBoton {
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  /* align-content: space-between; */
+.cajaCarritoCompra{
+  background-color: white;
+  padding: 20px;
 }
 
 .cajaCompraTotal{
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-between; */
-
   background-color: blue;
   padding: 20px;
   color: white;

@@ -56,13 +56,16 @@ function armadoProductosEnCarro() {
     for (let i=0; i < productosEnCarro.length; i++){
         aux = 
             aux +  `
-                    <div class="card text-dark d-flex justify-content-center" style="width: 100%;">
-                        <div class="cajaPrecioIdBoton">
-                            <h5>${productosEnCarro[i].nombre}</h5>
-                            <h5>Precio: $${productosEnCarro[i].precio}</h5>
+                <tbody>
+                    <tr>
+                        <th scope="row">${i+1}</th>
+                        <td>${productosEnCarro[i].nombre}</td>
+                        <td> $${productosEnCarro[i].precio}</td>
+                        <td>
                             <button id="myBtn" onclick="borrarDelCarro(${i})" class="btn btn-warning" type="submit">Quitar del carro</button>
-                        </div>
-                    </div>
+                        </td>
+                    </tr>
+                </tbody>
                 `
             }
             document.getElementById('carrito').innerHTML = aux;
