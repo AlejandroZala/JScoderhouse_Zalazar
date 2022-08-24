@@ -2,6 +2,13 @@
 let aux = localStorage.getItem('productosEnCarro');
 let productosEnCarro = [];
 
+function reseteoCarrito() {
+    productosEnCarro = [];
+    localStorage.setItem('prodcutosEnCarro', JSON.stringify(productosEnCarro));
+    armadoProductosEnCarro();
+    formasDePagoCompra();
+}
+
 //------------Armado de Lista de Productos en HTML---------------
 async function armadoListadoProductos() {
     const res = await fetch('./data.json');
@@ -48,6 +55,7 @@ function confirmaCompra() {
     confirmButtonText: 'Aceptar',
     confirmButtonColor: "#0000FF",
     });
+    reseteoCarrito();
  }
 
 function armadoProductosEnCarro() {
