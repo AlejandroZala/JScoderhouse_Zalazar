@@ -1,3 +1,11 @@
+(main.js) Entrega Proyecto final
+
+1- Mejoras en la distribución y alineado de elementos del carrito usando tabla.
+2- Utilizo Toastify para el momento de quitar productos del carro.
+3- Creo funcion reseteoCarrito luego de finalizar la compra.
+4- Mejoras y otpimización de lineas de código de cada html.
+
+-------------------------------------------------------------------------------------------------
 (main.js) Clase 15 Fetch y Async
 
 1- Creo archivo data.json con el array de productos.
